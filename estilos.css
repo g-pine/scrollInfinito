@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(2,0,36);
+	background: linear-gradient(80deg, rgba(2,0,36,1) 0%, rgb(78, 14, 26) 80%, rgb(68, 9, 5) 90%);
+	color: rgb(192, 158, 158);
+}
+
+.contenedor {
+	width: 100%;
+	max-width: fit-content;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 40px;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 80%;
+	min-height: 200px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
+
+@media screen and (max-width: 750px){
+
+	.contenedor {
+		width: max-content;
+		margin: 20px auto 100px auto;
+		display: flexbox;
+		grid-template-columns: repeat(2, 20vh);
+		gap: 30px;
+	}
+
+	.contenedor .pelicula .poster {
+		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 15px;
+	
+	}
+
+}
